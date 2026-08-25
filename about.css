@@ -1,0 +1,1201 @@
+/* =========================================================
+   DIRAN X — ABOUT PAGE
+   MIDNIGHT NAVY + ELECTRIC BLUE THEME
+========================================================= */
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #06101f;
+    color: #f5f9ff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+    padding: 20px 0;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(6, 16, 31, 0.88);
+
+    border-bottom:
+        1px solid
+        rgba(100, 180, 255, 0.12);
+
+    backdrop-filter: blur(18px);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #24b7ff;
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navbar a {
+    color: #9eafc3;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #ffffff;
+}
+
+
+/* HEADER BUTTON */
+
+.header-btn {
+    padding: 11px 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0787ff,
+            #20caff
+        );
+
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 8px 25px
+        rgba(24, 157, 255, 0.2);
+
+    transition: 0.3s;
+}
+
+.header-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 35px
+        rgba(24, 157, 255, 0.35);
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+section {
+    padding: 110px 0;
+}
+
+.section-label {
+    color: #25c8ff;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 14px 25px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+/* BUTTONS */
+
+.primary-btn {
+    background:
+        linear-gradient(
+            135deg,
+            #0787ff,
+            #20caff
+        );
+
+    color: white;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 160, 255, 0.2);
+}
+
+.primary-btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 160, 255, 0.35);
+}
+
+.secondary-btn {
+    border:
+        1px solid
+        rgba(90, 180, 240, 0.25);
+
+    background:
+        rgba(15, 34, 55, 0.45);
+
+    color: #ffffff;
+}
+
+.secondary-btn:hover {
+    border-color: #1dbaff;
+
+    background:
+        rgba(18, 55, 82, 0.6);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   ABOUT HERO
+========================================================= */
+
+.about-hero {
+    min-height: 75vh;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(0, 157, 255, 0.12),
+            transparent 35%
+        );
+}
+
+.about-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    background: #008cff;
+
+    filter: blur(180px);
+
+    opacity: 0.12;
+
+    top: -200px;
+    left: -200px;
+}
+
+.about-hero-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 80px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* HERO CONTENT */
+
+.about-hero-content h1 {
+
+    font-size:
+        clamp(48px, 6vw, 75px);
+
+    line-height: 1.05;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+}
+
+.about-hero-content h1 span {
+
+    display: block;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #24baff,
+            #72e5ff
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.about-hero-content > p:not(.section-label) {
+
+    color: #8fa3b8;
+
+    max-width: 600px;
+
+    font-size: 17px;
+
+    margin-bottom: 35px;
+}
+
+
+/* HERO BUTTONS */
+
+.about-hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   ABOUT HERO VISUAL
+========================================================= */
+
+.about-hero-visual {
+
+    min-height: 450px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+}
+
+
+/* MAIN LOGO CARD */
+
+.about-logo-card {
+
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18, 51, 82, 0.9),
+            rgba(5, 18, 31, 0.95)
+        );
+
+    border:
+        1px solid
+        rgba(80, 200, 255, 0.25);
+
+    box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.4),
+
+        0 0 70px
+        rgba(0, 160, 255, 0.08);
+
+    transform: rotate(-5deg);
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.about-logo-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: #00bfff;
+
+    filter: blur(100px);
+
+    opacity: 0.12;
+}
+
+.about-logo-card span {
+
+    font-size: 95px;
+
+    font-weight: 900;
+
+    color: #25c8ff;
+
+    text-shadow:
+        0 0 35px
+        rgba(37, 200, 255, 0.45);
+
+    position: relative;
+}
+
+.about-logo-card p {
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    position: relative;
+}
+
+.about-logo-card small {
+
+    color: #607991;
+
+    letter-spacing: 3px;
+
+    font-size: 9px;
+
+    margin-top: 7px;
+
+    position: relative;
+}
+
+
+/* FLOATING CARDS */
+
+.about-floating-card {
+
+    position: absolute;
+
+    padding: 15px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    border:
+        1px solid
+        rgba(80, 190, 255, 0.2);
+
+    background:
+        rgba(8, 27, 45, 0.85);
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.35);
+
+    z-index: 3;
+}
+
+.about-floating-card strong {
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+.about-floating-card span {
+
+    color: #25c8ff;
+
+    font-size: 20px;
+
+    text-shadow:
+        0 0 15px
+        rgba(37, 200, 255, 0.5);
+}
+
+.card-top {
+
+    top: 50px;
+
+    right: 10px;
+}
+
+.card-bottom {
+
+    bottom: 50px;
+
+    left: 10px;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.about-introduction {
+
+    background: #071321;
+
+    border-top:
+        1px solid
+        rgba(80, 180, 240, 0.08);
+
+    border-bottom:
+        1px solid
+        rgba(80, 180, 240, 0.08);
+}
+
+.introduction-container {
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 90px;
+}
+
+.introduction-heading h2 {
+
+    font-size:
+        clamp(35px, 5vw, 52px);
+
+    line-height: 1.1;
+}
+
+.introduction-heading h2 span {
+
+    color: #25c8ff;
+}
+
+.introduction-content {
+
+    padding-top: 10px;
+}
+
+.introduction-content p {
+
+    color: #8095a9;
+
+    font-size: 17px;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   MISSION / VISION
+========================================================= */
+
+.mission-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+.mission-card {
+
+    padding: 45px;
+
+    min-height: 360px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15, 39, 63, 0.8),
+            rgba(6, 19, 32, 0.9)
+        );
+
+    border:
+        1px solid
+        rgba(80, 190, 255, 0.12);
+
+    border-radius: 20px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: 0.35s;
+}
+
+.mission-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(37, 200, 255, 0.3);
+}
+
+.mission-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    background: #00aaff;
+
+    filter: blur(120px);
+
+    opacity: 0.07;
+
+    right: -80px;
+    bottom: -80px;
+}
+
+.mission-icon {
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        rgba(25, 170, 230, 0.1);
+
+    border:
+        1px solid
+        rgba(37, 200, 255, 0.18);
+
+    color: #25c8ff;
+
+    font-size: 25px;
+
+    margin-bottom: 30px;
+}
+
+.mission-card h2 {
+
+    font-size: 35px;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.mission-card h2 span {
+
+    color: #25c8ff;
+}
+
+.mission-card > p:last-child {
+
+    color: #74899e;
+
+    max-width: 500px;
+}
+
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.values-section {
+
+    background:
+        linear-gradient(
+            180deg,
+            #06101f,
+            #071525
+        );
+}
+
+.section-heading {
+
+    max-width: 700px;
+
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+
+    font-size:
+        clamp(35px, 5vw, 55px);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.section-heading h2 span {
+
+    color: #25c8ff;
+}
+
+.section-heading > p:last-child {
+
+    color: #71869b;
+}
+
+.values-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.value-card {
+
+    padding: 30px;
+
+    border:
+        1px solid
+        rgba(80, 180, 240, 0.1);
+
+    background:
+        rgba(8, 27, 45, 0.6);
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.value-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(37, 200, 255, 0.3);
+
+    background:
+        rgba(11, 36, 58, 0.8);
+}
+
+.value-number {
+
+    color: #25c8ff;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+.value-card h3 {
+
+    font-size: 22px;
+
+    margin:
+        20px 0 12px;
+}
+
+.value-card p {
+
+    color: #71869b;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   DIFFERENCE
+========================================================= */
+
+.difference-section {
+
+    background: #071321;
+}
+
+.difference-container {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+.difference-content h2 {
+
+    font-size:
+        clamp(38px, 5vw, 58px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.difference-content h2 span {
+
+    color: #25c8ff;
+}
+
+.difference-content > p:not(.section-label) {
+
+    color: #788da1;
+
+    margin-bottom: 18px;
+}
+
+.text-link {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    font-weight: 600;
+}
+
+.text-link span {
+
+    color: #25c8ff;
+
+    margin-left: 8px;
+}
+
+
+/* DIFFERENCE POINTS */
+
+.difference-points {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.difference-point {
+
+    display: flex;
+
+    gap: 20px;
+
+    padding: 22px;
+
+    background:
+        rgba(9, 29, 47, 0.7);
+
+    border:
+        1px solid
+        rgba(80, 180, 240, 0.1);
+
+    border-radius: 13px;
+
+    transition: 0.3s;
+}
+
+.difference-point:hover {
+
+    border-color:
+        rgba(37, 200, 255, 0.3);
+
+    transform: translateX(5px);
+}
+
+.difference-point > span {
+
+    color: #25c8ff;
+
+    font-size: 13px;
+
+    padding-top: 3px;
+}
+
+.difference-point h3 {
+
+    margin-bottom: 5px;
+}
+
+.difference-point p {
+
+    color: #6f8499;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.about-cta {
+
+    text-align: center;
+
+    padding: 120px 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0, 157, 255, 0.13),
+            transparent 55%
+        );
+}
+
+.about-cta-container {
+
+    max-width: 850px;
+}
+
+.about-cta h2 {
+
+    font-size:
+        clamp(40px, 6vw, 65px);
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+.about-cta h2 span {
+
+    color: #25c8ff;
+}
+
+.about-cta > div > p:not(.section-label) {
+
+    color: #71869b;
+
+    max-width: 600px;
+
+    margin:
+        0 auto 30px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+
+    border-top:
+        1px solid
+        rgba(80, 180, 240, 0.1);
+
+    padding-top: 70px;
+
+    background: #050d17;
+}
+
+.footer-container {
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap: 50px;
+
+    padding-bottom: 60px;
+}
+
+.footer-brand p {
+
+    color: #63788d;
+
+    max-width: 280px;
+
+    margin-top: 18px;
+
+    font-size: 14px;
+}
+
+.footer-links,
+.footer-contact {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.footer h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-contact p {
+
+    color: #63788d;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+
+    color: #25c8ff;
+}
+
+.footer-contact a {
+
+    color: #ffffff;
+
+    font-size: 13px;
+}
+
+.footer-bottom {
+
+    border-top:
+        1px solid
+        rgba(80, 180, 240, 0.1);
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 22px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: #455a6d;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        gap: 18px;
+    }
+
+    .about-hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-hero-content > p:not(.section-label) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-hero-buttons {
+        justify-content: center;
+    }
+
+    .about-hero-visual {
+        min-height: 400px;
+    }
+
+    .introduction-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .difference-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 18px 0;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .header-btn {
+        padding: 9px 15px;
+        font-size: 13px;
+    }
+
+    section {
+        padding: 75px 0;
+    }
+
+    .about-hero {
+        min-height: auto;
+        padding: 90px 0;
+    }
+
+    .about-hero-content h1 {
+        font-size: 45px;
+        letter-spacing: -2px;
+    }
+
+    .about-hero-content > p:not(.section-label) {
+        font-size: 15px;
+    }
+
+    .about-logo-card {
+        width: 240px;
+        height: 240px;
+    }
+
+    .about-logo-card span {
+        font-size: 75px;
+    }
+
+    .about-floating-card {
+        transform: scale(0.8);
+    }
+
+    .card-top {
+        right: -5px;
+    }
+
+    .card-bottom {
+        left: -5px;
+    }
+
+    .introduction-content p {
+        font-size: 15px;
+    }
+
+    .mission-card {
+        padding: 30px;
+    }
+
+    .mission-card h2 {
+        font-size: 30px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .difference-content h2 {
+        font-size: 40px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
